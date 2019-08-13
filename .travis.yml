@@ -1,0 +1,19 @@
+language: python
+python:
+  - 3.6
+  - 3.5
+
+install:
+  - pip install --upgrade pip
+  - pip install codecov coverage isort flake8 twine
+
+script:
+ - if python -c "import sys; exit(not (sys.version >= '3.6'))"; then pip install black; black --check .; fi
+ - flake8 --max-line-length=88 .
+ - isort --recursive --check-only --diff geowidgets tests
+ - ./setup.py sdist bdist_wheel
+ - twine check dist/*
+ - coverage run --include="./*" --omit="docs/","*/tests/*","*/tests.py","setup.py" ./setup.py test
+
+after_success:
+  - codecov
