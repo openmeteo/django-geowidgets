@@ -41,5 +41,5 @@ longitude. ``LatLonField`` is a form field that by default uses
            model = models.MyModel
 
 
-django-geowidgets is free software, available under the GNU General
+``django-geowidgets`` is free software, available under the GNU General
 Public License v3. See the LICENCE file for details.
