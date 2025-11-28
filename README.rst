@@ -4,18 +4,15 @@ django-geowidgets
 
 
 .. image:: https://img.shields.io/pypi/v/django-geowidgets.svg
-        :target: https://pypi.python.org/pypi/django-geowidgets
+    :target: https://pypi.python.org/pypi/django-geowidgets
 
-.. image:: https://img.shields.io/travis/openmeteo/django-geowidgets.svg
-        :target: https://travis-ci.org/openmeteo/django-geowidgets
+.. image:: https://github.com/openmeteo/django-geowidgets/actions/workflows/run-tests.yml/badge.svg
+    :alt: Build button
+    :target: https://github.com/openmeteo/django-geowidgets/actions/workflows/run-tests.yml
 
 .. image:: https://codecov.io/github/openmeteo/django-geowidgets/coverage.svg
-        :target: https://codecov.io/gh/openmeteo/django-geowidgets
-        :alt: Coverage
-
-.. image:: https://pyup.io/repos/github/openmeteo/django-geowidgets/shield.svg
-         :target: https://pyup.io/repos/github/openmeteo/django-geowidgets/
-         :alt: Updates
+    :target: https://codecov.io/gh/openmeteo/django-geowidgets
+    :alt: Coverage
 
 Currently this only contains ``LatLonWidget`` and ``LatLonField``.
 ``LatLonWidget`` is a simple ``MultiWidget`` showing latitude and
