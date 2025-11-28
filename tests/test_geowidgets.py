@@ -8,6 +8,8 @@ from geowidgets import LatLonField, LatLonWidget
 class LatLonWidgetTestCase(TestCase):
     def test_decompress_value(self):
         result = LatLonWidget().decompress(Point(12.34567891234567, -23.456789123456))
+        assert result[0] is not None
+        assert result[1] is not None
         self.assertAlmostEqual(result[0], 12.345679, places=13)
         self.assertAlmostEqual(result[1], -23.456789, places=13)
 
