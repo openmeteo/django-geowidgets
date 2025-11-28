@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools-scm>=7.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "django-geowidgets"
+requires-python = ">= 3.10"
+dependencies = [
+    "django>=4.2,<6",
+]
+authors = [
+    {name = "Antonis Christofides", email = "antonis@antonischristofides.com"},
+]
+maintainers = [
+    {name = "Antonis Christofides", email = "antonis@antonischristofides.com"},
+]
+description = "Simple widgets for GeoDjango"
+readme = "README.rst"
+keywords = ["geowidgets"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/openmeteo/django-geowidgets"
+Documentation = "https://github.com/openmeteo/django-geowidgets"
+Repository = "https://github.com/openmeteo/django-geowidgets"
+Changelog = "https://github.com/openmeteo/django-geowidgets/blob/master/HISTORY.rst"
+
+[tool.flake8]
+max-line-length = 88
+
+[tool.setuptools.package-data]
+"geowidgets" = ["py.typed"]
+
+[tool.setuptools_scm]
+write_to = "geowidgets/_version.py"
+
+[tool.isort]
+profile = "black"
+skip = ["_version.py"]
